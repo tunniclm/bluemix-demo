@@ -1,0 +1,19 @@
+{
+    "VCAP_SERVICES": {
+        "cloudantNoSQLDB": [
+            {
+                "name": "mywebsitecloudantService",
+                "label": "cloudantNoSQLDB",
+                "tags": [],
+                "plan": "Lite",
+                "credentials": {
+                    "host": "",
+                    "url": "",
+                    "username": "",
+                    "password": "",
+                    "port": 8080
+                }
+            }
+        ]
+    }
+}

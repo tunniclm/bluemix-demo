@@ -1,0 +1,20 @@
+declared-services:
+  mywebsiteCloudantService:
+    label: cloudantNoSQLDB
+    plan: Lite
+  mywebsiteScalingService:
+    label: Auto-scaling
+    plan: free
+applications:
+- name: mywebsite
+  memory: 128M
+  instances: 1
+  random-route: true
+  buildpack: swift_buildpack
+  command: mywebsiteServer --bind 0.0.0.0:$PORT
+  env:
+    OPENSPEC_API: "/explorer/swagger.yml"
+  services:
+  - mywebsiteCloudantService
+  - mywebsiteScalingService
+  timeout: 180

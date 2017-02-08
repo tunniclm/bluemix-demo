@@ -1,0 +1,25 @@
+{
+  "appType": "web",
+  "appName": "mywebsite",
+  "metrics": true,
+  "autoscale": true,
+  "bluemixconfig": {
+    "bluemix": true,
+    "datastores": [
+      {
+        "name": "cloudant",
+        "type": "cloudantNoSQLDB",
+        "host": "",
+        "url": "",
+        "username": "",
+        "password": "",
+        "port": 8080
+      }
+    ]
+  },
+  "config": {
+    "store": "cloudant",
+    "logger": "helium",
+    "port": 8090
+  }
+}
